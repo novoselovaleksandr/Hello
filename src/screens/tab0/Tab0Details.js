@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { ScrollView, StyleSheet, View, Text } from 'react-native'
-import { Header, ImageBigCard } from '../components/uikit'
+import { Header, ImageBigCard } from '../../components'
 
 const styles = StyleSheet.create({
   container: {
@@ -28,10 +28,9 @@ const styles = StyleSheet.create({
   }
 })
 
-class DetailsScreen extends PureComponent {
+class Tab0Details extends Component {
   render() {
-    console.log('this.props', this.props)
-    const { image, name, summary } = this.props.navigation.state.params
+    const { image, name, summary } = this.props.route.params
     const { navigation } = this.props
     const data = { image }
     const { container, h1, h2, sub } = styles
@@ -56,4 +55,5 @@ class DetailsScreen extends PureComponent {
     )
   }
 }
-export default DetailsScreen
+
+export { Tab0Details }

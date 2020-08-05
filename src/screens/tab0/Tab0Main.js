@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { View, ScrollView } from 'react-native'
-import { Header, ImageCard, Layout } from '../components/uikit'
-import { BATMAN_DETAILS } from '../routes'
+import { Header, ImageCard, Layout } from '../../components'
 
-const url = 'http://api.tvmaze.com/search/shows?q=batman'
+const url = 'http://api.tvmaze.com/search/shows?q=stargate'
 
-export default class HomeScreen extends Component {
+class Tab0Main extends Component {
   state = {
-    title: 'BATMAN',
+    title: 'STAR GATE',
     data: []
   }
 
@@ -33,7 +32,7 @@ export default class HomeScreen extends Component {
               <ImageCard
                 data={item.show}
                 key={item.show.id}
-                onPress={() => navigation.navigate(BATMAN_DETAILS, item.show)}
+                onPress={() => navigation.navigate('TAB0_DETAILS', item.show)}
               />
             ))}
           </Layout>
@@ -42,3 +41,5 @@ export default class HomeScreen extends Component {
     )
   }
 }
+
+export { Tab0Main }

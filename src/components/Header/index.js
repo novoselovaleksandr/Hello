@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { ifIphoneX } from 'react-native-iphone-x-helper'
-import { width } from '../../../../constants'
+import { width } from '../../../constants'
 
 const styles = StyleSheet.create({
   viewStyle: {
