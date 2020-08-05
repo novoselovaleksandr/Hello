@@ -1,16 +1,11 @@
-import React, { Component } from 'react'
-import { Header } from './components/uikit'
+import React from 'react'
+import { createBottomTabNavigator } from 'react-navigation'
+import One from './screen1'
+import Two from './screen2'
+import Three from './screen3'
 
-export default class App extends Component {
-  state = {
-    title: 'STAR GATE8'
-  }
-
-  render() {
-    return (
-      <>
-        <Header title={'this.state.title'} />
-      </>
-    )
-  }
-}
+export default createBottomTabNavigator({
+  Stargate: One,
+  Batman: Two,
+  Spideman: Three
+})
